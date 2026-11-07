@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "SubText — Minimalist YouTube Subtitle Extractor",
+  "short_name": "SubText",
+  "version": "1.0.0",
+  "description": "Extract, preview, and download clean YouTube subtitles and auto-captions (.txt and .srt).",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SubText Subtitle Extractor",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

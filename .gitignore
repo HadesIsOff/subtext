@@ -1,0 +1,9 @@
+# Secret signing keys
+*.pem
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Dev logs
+*.log
